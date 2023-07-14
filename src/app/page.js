@@ -7,7 +7,6 @@ const Page = () => {
   return (
     <div>
       <Map />
-      {/* ... rest of your page code ... */}
       <Banner />
     </div>
   );

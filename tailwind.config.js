@@ -15,6 +15,9 @@ module.exports = {
       fontFamily: {
         'josefin': ['Josefin Sans', 'sans-serif'],
       },
+      screens: {
+        'custom': '1165px',
+      },
     },
   },
   plugins: [

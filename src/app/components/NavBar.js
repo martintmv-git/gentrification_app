@@ -32,7 +32,7 @@ const NavBar = () => {
             </a>
           </div>
 
-          <form className="mb-0 hidden lg:hidden xl:flex w-2/5 mr-4">
+          <form className="mb-0 hidden custom:flex w-2/5 mr-4">
             <div className="relative w-full">
               <input
                 className="h-10 rounded-lg border-gray-200 pe-10 text-sm placeholder-gray-300 focus:z-10 w-full"
@@ -61,9 +61,9 @@ const NavBar = () => {
             </div>
           </form>
 
-          <div className="md:flex md:items-center lg:w-1/2 justify-end">
+          <div className="md:flex md:items-center custom:w-1/2 justify-end">
             <div className="flex items-center gap-6">
-              <nav aria-label="Global" className="hidden lg:hidden xl:flex">
+              <nav aria-label="Global" className="hidden custom:flex">
                 <ul className="flex items-center gap-6 text-sm">
                   <li>
                     <div onClick={closeMenu}>
@@ -99,7 +99,7 @@ const NavBar = () => {
                 </ul>
               </nav>
               <div className="flex items-center gap-4">
-                <div className="block lg:hidden">
+                <div className="block custom:hidden">
                   <button 
                     className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
                     onClick={toggleMenu}
@@ -125,7 +125,7 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-      <nav aria-label="Global" className={`${isMenuOpen ? 'flex' : 'hidden'} lg:hidden bg-white w-full shadow-lg`}>
+      <nav aria-label="Global" className={`${isMenuOpen ? 'flex' : 'hidden'} custom:hidden bg-white w-full shadow-lg`}>
         <ul className="flex flex-col items-center gap-6 text-sm w-full py-4">
           <li>
             <form className="w-full mb-4">

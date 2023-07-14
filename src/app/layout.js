@@ -1,7 +1,6 @@
 import './globals.css'
 import { Josefin_Sans } from 'next/font/google'
 import NavBar from './components/NavBar';
-import { ClerkProvider } from '@clerk/nextjs'
 
 const josefinSans = Josefin_Sans({
   weight: '500', // Specify the weight if 'Josefin Sans' is not available as a variable font.
@@ -15,13 +14,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider>
     <html lang="en">
       <body>
         <NavBar />
         {children}
       </body>
     </html>
-    </ClerkProvider>
   )
 }

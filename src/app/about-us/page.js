@@ -1,6 +1,7 @@
 import React from "react";
-import { Josefin_Sans } from 'next/font/google'
+import { Josefin_Sans } from 'next/font/google';
 import Banner from "../components/Banner";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const josefinSans = Josefin_Sans({
   weight: '400',
@@ -22,7 +23,7 @@ const AboutUs = () => {
             <div className="flex flex-col items-center md:items-start w-full md:w-1/3 flex-shrink-0">
               <a href="https://giuliaandronico.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center md:justify-start">
                 <h2 className="text-2xl font-bold text-red-500 whitespace-nowrap">Giulia Andronico</h2>
-                <span className="ml-2 text-red-500">↗</span>
+                <FaExternalLinkAlt className="ml-2 text-red-500" />
               </a>
               <img className="w-9/10 md:w-full object-cover" src="/giulia.png" alt="Giulia Andronico Image" />
             </div>
@@ -36,7 +37,7 @@ const AboutUs = () => {
           <div className="flex flex-col items-center md:items-start w-full md:w-1/3 flex-shrink-0">
             <a href="https://martintomov.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center md:justify-start">
               <h2 className="text-2xl font-bold text-red-500 whitespace-nowrap">Martin Tomov</h2>
-              <span className="ml-2 text-red-500">↗</span>
+              <FaExternalLinkAlt className="ml-2 text-red-500" />
             </a>
             <img className="w-9/10 md:w-full object-cover" src="/martin.png" alt="Martin Tomov Image" />
           </div>

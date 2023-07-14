@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/nextjs": "^4.21.15",
     "@maptiler/sdk": "^1.0.12",
     "@tailwindcss/forms": "^0.5.3",
     "autoprefixer": "10.4.14",

@@ -20,7 +20,7 @@ const NavBar = () => {
   };
 
   return (
-    <header className={`${josefinSans.className} bg-white relative shadow-lg`}>
+    <header className={`${josefinSans.className} bg-white relative shadow-lg sticky top-0 z-50`}>
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center lg:justify-start lg:w-1/2">
@@ -125,7 +125,7 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-      <nav aria-label="Global" className={`${isMenuOpen ? 'flex' : 'hidden'} custom:hidden bg-white w-full shadow-lg`}>
+      <nav aria-label="Global" className={`${isMenuOpen ? 'flex' : 'hidden'} custom:hidden bg-white w-full shadow-lg sticky top-0 z-50`}>
         <ul className="flex flex-col items-center gap-6 text-sm w-full py-4">
           <li>
             <form className="w-full mb-4">

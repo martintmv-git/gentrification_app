@@ -134,7 +134,7 @@ const NavBar = () => {
             <form className="w-full mb-4">
               <div className="relative w-full">
                 <input
-                  className="py-2 px-20 rounded-lg border-gray-200 text-sm placeholder-gray-300 focus:z-10 w-full"
+                  className="py-2 px-20 rounded-lg border-gray-400 text-sm placeholder-gray-300 focus:z-10 w-full"
                   placeholder="Coming Soon..."
                   type="text"
                   disabled

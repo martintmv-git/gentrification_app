@@ -96,7 +96,7 @@ const NavBar = () => {
                       className="rounded-md bg-red-600 px-5 py-2.5 text-sm font-medium text-white shadow"
                       href="/"
                     >
-                      Sign Up
+                      Sign U
                     </a>
                   </div>
                 </ul>

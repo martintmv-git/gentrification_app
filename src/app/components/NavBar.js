@@ -131,36 +131,37 @@ const NavBar = () => {
       <nav aria-label="Global" className={`${isMenuOpen ? 'flex' : 'hidden'} custom:hidden bg-white w-full shadow-lg sticky top-0 z-50`}>
         <ul className="flex flex-col items-center gap-6 text-sm w-full py-4">
           <li>
-            <form className="w-full mb-4">
-              <div className="relative w-full">
-                <input
-                  className="py-2 px-20 rounded-lg border-gray-400 text-sm placeholder-gray-300 focus:z-10 w-full"
-                  placeholder="Coming Soon..."
-                  type="text"
-                  disabled
-                />
+          <form className="w-full mb-4">
+  <div className="relative w-full">
+    <input
+      className="py-2 px-20 rounded-lg border-gray-400 text-sm placeholder-gray-500 focus:z-10 w-full text-center"
+      placeholder="Coming Soon..."
+      type="text"
+      disabled
+    />
 
-                <button
-                  type="submit"
-                  className="absolute inset-y-0 end-0 rounded-r-lg p-2 text-gray-600"
-                  disabled
-                >
-                  <span className="sr-only">Submit Search</span>
-                  <svg
-                    className="h-5 w-5"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      clipRule="evenodd"
-                      d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                      fillRule="evenodd"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-            </form>
+    <button
+      type="submit"
+      className="absolute inset-y-0 end-0 rounded-r-lg p-2 text-gray-600"
+      disabled
+    >
+      <span className="sr-only">Submit Search</span>
+      <svg
+        className="h-5 w-5"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clipRule="evenodd"
+          d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+          fillRule="evenodd"
+        ></path>
+      </svg>
+    </button>
+  </div>
+</form>
+
           </li>
           <li>
             <div onClick={closeMenu}>

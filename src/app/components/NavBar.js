@@ -96,7 +96,7 @@ const NavBar = () => {
                       className="rounded-md bg-red-600 px-5 py-2.5 text-sm font-medium text-white shadow"
                       href="/"
                     >
-                      Login / Sign Up
+                      Sign Up
                     </a>
                   </div>
                 </ul>
@@ -191,7 +191,7 @@ const NavBar = () => {
               className="rounded-md bg-red-600 py-2 px-20 text-sm font-medium text-white shadow"
               href="/"
             >
-              Login / Sign Up
+              Sign Up
             </a>
           </div>
         </ul>

@@ -34,15 +34,18 @@ const NavBar = () => {
 
           <form className="mb-0 hidden custom:flex w-2/5 mr-4">
             <div className="relative w-full">
-              <input
-                className="h-10 rounded-lg border-gray-200 pe-10 text-sm placeholder-gray-300 focus:z-10 w-full"
-                placeholder="Search Location"
-                type="text"
-              />
+            <input
+  class="h-10 rounded-lg border-gray-200 pe-10 text-sm placeholder-gray-400 focus:z-10 w-full disabled:bg-gray-200 cursor-not-allowed"
+  placeholder="Coming Soon..."
+  type="text"
+  disabled
+/>
+
 
               <button
                 type="submit"
                 className="absolute inset-y-0 end-0 rounded-r-lg p-2 text-gray-600"
+                disabled
               >
                 <span className="sr-only">Submit Search</span>
                 <svg
@@ -132,13 +135,15 @@ const NavBar = () => {
               <div className="relative w-full">
                 <input
                   className="py-2 px-20 rounded-lg border-gray-200 text-sm placeholder-gray-300 focus:z-10 w-full"
-                  placeholder="Search Location"
+                  placeholder="Coming Soon..."
                   type="text"
+                  disabled
                 />
 
                 <button
                   type="submit"
                   className="absolute inset-y-0 end-0 rounded-r-lg p-2 text-gray-600"
+                  disabled
                 >
                   <span className="sr-only">Submit Search</span>
                   <svg

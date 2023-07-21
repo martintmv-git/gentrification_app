@@ -49,6 +49,7 @@ const Banner = () => {
             <img src="/gh.svg" alt="GitHub" className="h-6 w-6" />
           </a>
         </div>
+        <div className="text-xs font-medium text-gray-600">Beta v0.1.0</div>
         <div className="pr-3 sm:pr-5 lg:pr-7">
           <Link href="/donate">
             <div className="rounded-md bg-red-600 px-5 py-2.5 text-sm font-medium text-white shadow cursor-pointer">Donate</div>

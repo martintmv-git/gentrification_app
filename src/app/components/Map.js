@@ -1,63 +1,92 @@
 "use client"
 import React, { useEffect } from 'react';
 import maplibre from 'maplibre-gl'; 
+import { Josefin_Sans } from 'next/font/google';
+
+const josefinSans = Josefin_Sans({
+  weight: '400',
+  subsets: ['latin'],
+});
 
 function MapComponent() {
   useEffect(() => {
     const map = new maplibre.Map({
       container: 'map',
       style: 'https://api.maptiler.com/maps/streets/style.json?key=yqoBKpegIKzfVwh70q12',
-      center: [5.4697, 51.4416],
-      zoom: 9,
-      bearing: 0,
-      pitch: 0,
+      center: [4.9041, 52.3676],
+      zoom: 5,
+      attributionControl: false, // Hide attribution
     });
 
     // Add zoom and rotation controls to the map.
     map.addControl(new maplibre.NavigationControl());
 
-    // Function to toggle between 2D and 3D view.
-    function toggle3D() {
-      if (map.getPitch() === 0) {
-        map.easeTo({ pitch: 60 });
-      } else {
-        map.easeTo({ pitch: 0 });
-      }
-    }
-
-    // Add a button to toggle 3D view.
-    const button = document.createElement('a');
-    button.textContent = 'Toggle 3D';
-    button.style.position = 'absolute';
-    button.style.zIndex = '1';
-    button.style.top = '10px';
-    button.style.right = '10px';
-    button.style.backgroundColor = '#F3F4F6'; // bg-gray-100
-    button.style.padding = '10px 20px'; // px-5 py-2.5
-    button.style.textDecoration = 'none'; // remove underline
-    button.style.borderRadius = '0.375rem'; // rounded-md
-    button.style.color = '#991B1B'; // text-red-600
-    button.style.fontWeight = '500'; // font-medium
-    button.style.fontSize = '0.875rem'; // text-sm
-    button.style.cursor = 'pointer';
-    button.onclick = toggle3D;
-
-    // Append the button within the map container
     const mapContainer = document.getElementById('map');
     mapContainer.style.position = 'relative'; // Ensure it's positioned relative to the map
-    mapContainer.appendChild(button);
 
     return () => {
       map.remove(); 
-      // Remove the button when component is unmounted
-      if (mapContainer.contains(button)) {
-        mapContainer.removeChild(button);
-      }
     };
   }, []);
 
   return (
-    <div id="map" className="w-full h-screen"></div>
+    <div id="map" className="w-full h-screen relative overflow-hidden">
+      <div className="absolute inset-0 bg-black opacity-40" style={{pointerEvents: 'none'}}></div>
+      <div className={`${josefinSans.className} flex flex-col items-center text-black w-full h-3/4 sm:h-5/6 md:h-5/6 lg:max-w-2xl xl:max-w-3xl rounded-lg absolute top-1/4 sm:top-1/3 md:top-1/3 lg:top-1/4 xl:top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 py-20 sm:py-24 md:py-28 lg:py-32 px-2 sm:px-4 md:px-16 custom-css`}>
+      <br></br>
+        <section className="bg-white">
+          <div className="p-2 sm:p-4 md:p-8 lg:p-12 xl:p-24">
+            <div className="mx-auto max-w-lg text-center">
+              <h2 className="text-2xl font-bold text-gray-900 md:text-3xl">
+                Stay Updated with 
+                <span className="font-extrabold"> Gentrification</span>
+                <span className="font-extrabold text-red-500">.app</span>
+              </h2>
+
+              <p className="text-gray-500 sm:mt-4 text-center max-w-md mx-auto">
+                Welcome to Gentrification.app, a platform dedicated to creating awareness and fostering understanding about the impacts of gentrification.<br/><br/> Our project is still <u>under development</u>, but you can stay informed about our progress and not miss our upcoming launch by signing up for our newsletter.<br/><br/> Join us as we work towards more equitable urban development. <u>Your involvement matters.</u>
+              </p>
+            </div>
+
+            <div className="mx-auto mt-8 max-w-xl">
+              <form action="#" className="sm:flex sm:gap-4">
+                <div className="sm:flex-1">
+                  <label htmlFor="email" className="sr-only">Email</label>
+
+                  <input
+                    type="email"
+                    placeholder="Email address"
+                    className="w-full rounded-md border-gray-200 bg-white p-3 text-gray-700 shadow-sm transition focus:border-white focus:outline-none focus:ring focus:ring-yellow-400"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="group mt-4 flex w-full items-center justify-center gap-2 rounded-md bg-red-600 px-5 py-3 text-white transition focus:outline-none focus:ring focus:ring-yellow-400 sm:mt-0 sm:w-auto"
+                >
+                  <span className="text-sm font-medium"> Sign Up </span>
+
+                  <svg
+                    className="h-5 w-5 rtl:rotate-180"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
   );
 }
 

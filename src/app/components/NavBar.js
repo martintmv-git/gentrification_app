@@ -35,7 +35,7 @@ const NavBar = () => {
           <form className="mb-0 hidden custom:flex w-2/5 mr-4">
             <div className="relative w-full">
             <input
-  class="h-10 rounded-lg border-gray-200 pe-10 text-sm placeholder-gray-400 focus:z-10 w-full disabled:bg-gray-200 cursor-not-allowed"
+  className="h-10 rounded-lg border-gray-200 pe-10 text-sm placeholder-gray-400 focus:z-10 w-full disabled:bg-gray-200 cursor-not-allowed"
   placeholder="Coming Soon..."
   type="text"
   disabled
